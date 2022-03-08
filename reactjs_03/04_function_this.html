@@ -1,0 +1,30 @@
+<script>
+    //04_function_this.html
+
+    //객체 데이터와 생성자 함수의 차이
+    //객체 데이터는 고정값
+    let myCat1 = {
+        catName : "완두",
+        catLegs : 4,
+        catInfo : function(){
+            console.log(`우리집반려 동물 ${this.catName}는 다리가 ${this.catLegs}개 입니다.`);
+        }
+    }
+    myCat1.catInfo(); //객체 데이터 내부의 함수를 실행하는 호출
+
+    //생성자 함수는 변동값
+    function Animal(name, legs){
+        this.catName = name;
+        this.catLegs = legs;
+        this.catInfo = function(){
+            console.log(`우리집반려 동물 ${this.catName}는 다리가 ${this.catLegs}개 입니다.`);
+        }
+        console.log(this);
+    }
+    let myCat2 = new Animal("완두", 4);
+    console.log(myCat2);
+    myCat2.catInfo();
+
+    let myCat3 = new Animal("까망이", 4);
+    myCat3.catInfo();
+</script>

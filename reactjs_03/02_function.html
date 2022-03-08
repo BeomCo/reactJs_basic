@@ -1,0 +1,21 @@
+<script>
+    //02_function.html
+
+    //[익명함수와 Arrow Function]
+
+    //익명함수
+    const circleArea1 = function(pi, r){
+        let area = pi * r * r;
+        return area;
+    }
+    let result1 = circleArea1(3.14, 4);
+    console.log(result1);  //50.24
+
+    //Arrow Function
+    const circleArea2 = (pi, r) => {
+        let area = pi * r * r;
+        return area;
+    }
+    let result2 = circleArea2(3.14, 4);
+    console.log(result2);  //50.24
+</script>

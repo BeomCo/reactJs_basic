@@ -1,0 +1,22 @@
+<script>
+    //03_function_생성자.html
+
+    //[함수 호출과 생성자 함수]
+    //생성자 함수란... 자바스크립트 내부에서는 존재하지 않은 객체에 대한 결과값을 구성하기 위해서 함수문으로 작성한다.
+    //문서 내부에서 선언된 명칭에 의한 사전적 정의
+    function Person(){
+        this.head = 1;  //Person 이라는 메모리 공간에 추가된 속성과 속성값
+        this.arms = 2;  //Person 이라는 메모리 공간에 추가된 속성과 속성값
+        this.legs = 2;  //Person 이라는 메모리 공간에 추가된 속성과 속성값
+
+        finger = 10;  //내부 속성과 속성값을 함수에 등록하기 위해서는 this라는 장소를 작성해야 한다. 
+
+        console.log(this);  //Person {head: 1, arms: 2, legs: 2}
+    }
+    //console.log(Person.head);  //사용불가
+    let person = new Person();  //???
+    console.log(person);  //Person {head: 1, arms: 2, legs: 2}
+    console.log(person.head);  //1
+    console.log(person.finger);  //undefined
+
+</script>
